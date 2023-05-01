@@ -1,0 +1,22 @@
+---
+title: "Regresi Linear Berganda"
+author: "Arditya Criszardin"
+date: "2023-05-01"
+output: html_document
+---
+
+```{r}
+# Memuat data
+my_data <- read.csv("my_data.csv")
+
+# Melakukan Regresi Linear Berganda dengan menggunakan paket "stats"
+my_model <- lm(dependent_variable ~ independent_variable_1 + independent_variable_2, data = my_data)
+
+# Menampilkan hasil Regresi Linear Berganda
+summary(my_model)
+
+# Memprediksi nilai baru menggunakan model yang telah dibuat
+new_data <- data.frame(independent_variable_1 = 3, independent_variable_2 = 4)
+predict(my_model, newdata = new_data)
+```
+
